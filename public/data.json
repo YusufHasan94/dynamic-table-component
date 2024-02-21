@@ -1,0 +1,26 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "category": "Fiction",
+    "price": 12.99,
+    "date": "2023-10-15",
+    "author": "F. Scott Fitzgerald",
+    "status": ["publish", "drift"]
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "category": "Fiction",
+    "price": 11.5,
+    "date": "2022-05-10",
+    "author": "J.D. Salinger",
+    "status": ["drift", "publish"]
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "category": "Fiction",
+    "price": 10.99,
+    "date": "2021-09-05",
+    "author": "Harper Lee",
+    "status": ["publish", "drift"]
+  }
+]
