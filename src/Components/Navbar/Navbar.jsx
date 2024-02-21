@@ -11,16 +11,16 @@ const Navbar = ({
   toggleCols,
 }) => {
   return (
-    <div className="w-full flex justify-between items-center mt-10">
+    <div className="w-full flex justify-between items-center mt-10 Navbar">
       <div>
         <h1 className="text-3xl font-semibold">Table Title</h1>
       </div>
-      <div className="relative">
+      <div className="relative NavIconContainer">
         <button className="text-4xl" onClick={handleToggle}>
           {isOpen ? <IoMdCloseCircleOutline /> : <CiMenuBurger />}
         </button>
         {isOpen ? (
-          <div className="absolute right-0 min-w-[260px]">
+          <div className="absolute right-0 min-w-[260px] navItemsContainer">
             <NavItems
               tableCols={tableCols}
               selectedCols={selectedCols}
