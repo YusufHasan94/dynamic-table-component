@@ -2,7 +2,6 @@ import React from "react";
 import { FiEdit } from "react-icons/fi";
 
 const TableCard = ({ item, colTitle }) => {
-  console.log(item);
   return (
     <div className="flex text-start items-center my-2 gap-4 text-lg font-">
       {colTitle === "Title" && <h1>{item.title}</h1>}

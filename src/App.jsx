@@ -45,11 +45,14 @@ const App = () => {
     if (selectedCols.includes(colTitle)) {
       const filterCols = selectedCols.filter((col) => col != colTitle);
       setSelectedCols(filterCols);
+      console.log(filterCols);
     } else {
       const restCols = [...selectedCols, colTitle];
       setSelectedCols(restCols);
+      console.log(restCols);
     }
   };
+  console.log(selectedCols);
 
   return (
     <div className="max-w-[1440px] my-0 mx-auto  px-16 py-7 min-h-screen bg-slate-100 rounded-lg">
@@ -60,7 +63,7 @@ const App = () => {
         selectedCols={selectedCols}
         toggleCols={toggleCols}
       />
-      <Table data={data} tableCols={tableCols} selectedCols={selectedCols} />
+      <Table data={data} selectedCols={selectedCols} />
     </div>
   );
 };
