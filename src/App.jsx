@@ -9,13 +9,13 @@ const App = () => {
 
   //table columns
   const tableCols = [
-    { title: "Title" },
-    { title: "Category" },
-    { title: "Price" },
-    { title: "Date" },
-    { title: "Author" },
-    { title: "Status" },
-    { title: "Action" },
+    { title: "Title", serial: 1 },
+    { title: "Category", serial: 2 },
+    { title: "Price", serial: 3 },
+    { title: "Date", serial: 4 },
+    { title: "Author", serial: 5 },
+    { title: "Status", serial: 6 },
+    { title: "Action", serial: 7 },
   ];
 
   //fetching data form locally store json file
@@ -45,14 +45,16 @@ const App = () => {
     if (selectedCols.includes(colTitle)) {
       const filterCols = selectedCols.filter((col) => col != colTitle);
       setSelectedCols(filterCols);
-      console.log(filterCols);
     } else {
       const restCols = [...selectedCols, colTitle];
-      setSelectedCols(restCols);
-      console.log(restCols);
+      const sortedCols = restCols.sort((a, b) => {
+        const A = tableCols.find((col) => col.title === a).serial;
+        const B = tableCols.find((col) => col.title === b).serial;
+        return A - B;
+      });
+      setSelectedCols(sortedCols);
     }
   };
-  console.log(selectedCols);
 
   return (
     <div className="max-w-[1440px] my-0 mx-auto  px-16 py-7 min-h-screen bg-slate-100 rounded-lg">
